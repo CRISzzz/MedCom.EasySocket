@@ -1,2 +1,3 @@
-# hl7.socket
+# MedCom.Socket
 hl7 client
+dicom client

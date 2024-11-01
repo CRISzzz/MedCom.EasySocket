@@ -1,0 +1,6 @@
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.csproj.AssemblyReference.cache
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.AssemblyInfoInputs.cache
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.AssemblyInfo.cs
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.csproj.CoreCompileInputs.cache
+C:\WorkSpace\GithubCode\hl7.socket\hl7.socket\obj\Debug\net8.0\MedCom.Socket.sourcelink.json
