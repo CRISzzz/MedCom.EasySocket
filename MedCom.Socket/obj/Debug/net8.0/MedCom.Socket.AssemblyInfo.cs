@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedCom.Socket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58b05f804459b22d7f994d0cecd12548449eff19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a775f6e00f6b79b9c89d48cd41b3358310197ea9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedCom.Socket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedCom.Socket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

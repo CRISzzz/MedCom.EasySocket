@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkSpace\\GithubCode\\hl7.socket\\hl7.socket\\MedCom.Socket.csproj",
+      "projectUniqueName": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj",
       "projectName": "MedCom.Socket",
-      "projectPath": "C:\\WorkSpace\\GithubCode\\hl7.socket\\hl7.socket\\MedCom.Socket.csproj",
+      "projectPath": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkSpace\\GithubCode\\hl7.socket\\hl7.socket\\obj\\",
+      "outputPath": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

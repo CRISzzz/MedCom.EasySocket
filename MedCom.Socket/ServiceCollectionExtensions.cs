@@ -15,7 +15,7 @@ namespace MedCom.Socket
     {
         public static IServiceCollection AddHL7(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<MedComSetting>(configuration.GetSection("MedComSetting"));
+            //services.Configure<MedComSetting>(configuration.GetSection("MedComSetting"));
             //services.AddSingleton<IProtocal, DefaultAppSettings>();
             return services;
         }
