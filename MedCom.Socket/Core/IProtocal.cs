@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.Socket.Core
+namespace MedCom.EasySocket.Core
 {
     public interface IProtocal
     {
         void FetchPatientData();
 
-        void SendReport();
+        bool SendReport(Func<PatientReport> report);
 
-        void SendReportQc();
+        bool SendReportQc(Func<PatientReport> report);
 
-        void UpdateReport();
+        bool UpdateReport(Func<PatientReport> report);
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.EasySocket.Core
+namespace MedCom.EasySocket.MySocketClient
 {
-    public abstract class MessageSender
+    public interface IPkgFilter
     {
-        //public string CreatMessage(object obj) { };
+        string ExtractPayload(string message);
     }
 }

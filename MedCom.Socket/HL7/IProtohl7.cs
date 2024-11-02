@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MedCom.EasySocket.Core;
 
-namespace MedCom.EasySocket.Core
+namespace MedCom.EasySocket.HL7
 {
-    public abstract class MessageSender
+    public interface IProtohl7 : IProtocal
     {
-        //public string CreatMessage(object obj) { };
+
     }
 }

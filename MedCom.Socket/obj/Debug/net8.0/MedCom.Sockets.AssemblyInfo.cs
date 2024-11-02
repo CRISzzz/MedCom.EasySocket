@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MedCom.Socket")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MedCom.Sockets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bed049e3756cb2247528bc156e308617e65abd6f")]
-[assembly: System.Reflection.AssemblyProductAttribute("MedCom.Socket")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MedCom.Socket")]
+[assembly: System.Reflection.AssemblyProductAttribute("MedCom.Sockets")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MedCom.Sockets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

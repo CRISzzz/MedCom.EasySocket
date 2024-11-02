@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.EasySocket.Core
+namespace MedCom.EasySocket.HL7
 {
-    public abstract class MessageSender
+    public enum Hl7ValueType
     {
-        //public string CreatMessage(object obj) { };
+        NM = 1,
+
+        ED = 2,
+
+        ST = 3
     }
 }

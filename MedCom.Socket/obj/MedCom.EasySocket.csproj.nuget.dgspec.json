@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj": {}
+    "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MedCom.EasySocket.csproj": {}
   },
   "projects": {
-    "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj": {
+    "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MedCom.EasySocket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj",
-        "projectName": "MedCom.Socket",
-        "projectPath": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\MedCom.Socket.csproj",
+        "projectUniqueName": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MedCom.EasySocket.csproj",
+        "projectName": "MedCom.EasySocket",
+        "projectPath": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MedCom.EasySocket.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\WorkSpace\\GithubCode\\MedCom.Socket\\MedCom.Socket\\obj\\",
+        "outputPath": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

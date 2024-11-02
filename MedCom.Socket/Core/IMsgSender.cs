@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.Core
 {
-    public abstract class MessageSender
+    public interface IMsgSender
     {
-        //public string CreatMessage(object obj) { };
+        string CreateMessage(PatientReport report);
     }
 }
