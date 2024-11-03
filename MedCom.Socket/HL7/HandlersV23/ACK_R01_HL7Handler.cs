@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.HL7.HandlersV23
 {
-    public class ACK_R01_HL7Handler<T> : IMsgAnswer<PatientReport>
+    public class ACK_R01_HL7Handler : MsgAnswer<PatientReport>
     {
-        public Result<PatientReport> Parse(string message)
+        public override Result<PatientReport> Parse(string message)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("Invalid HL7 message");

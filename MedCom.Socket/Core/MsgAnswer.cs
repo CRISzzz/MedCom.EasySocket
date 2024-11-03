@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.Core
 {
-    public interface IMsgAnswer<T> where T : class
+    public abstract class MsgAnswer<T> where T : class
     {
-        Result<T> Parse(string message);
+        public abstract Result<T> Parse(string message);
     }
 }

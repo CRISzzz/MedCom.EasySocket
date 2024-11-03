@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.HL7.HandlersV23
 {
-    public class ORU_R01_HL7PkgHandler: IMsgSender
+    public class ORU_R01_HL7PkgHandler: MsgSender
     {
-        public string CreateMessage(PatientReport report)
+        public override string CreateMessage(PatientReport report)
         {
             if (report == null || report.IndicatorDic.Count == 0)
                 throw new ArgumentNullException("No test result");

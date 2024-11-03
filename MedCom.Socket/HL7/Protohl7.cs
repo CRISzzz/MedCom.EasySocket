@@ -18,7 +18,7 @@ namespace MedCom.EasySocket.HL7
         public bool SendReport(Func<PatientReport> report)
         {
             PatientReport patientReport = report();
-            IMsgSender sender = new ORU_R01_HL7PkgHandler();
+            MsgSender sender = new ORU_R01_HL7PkgHandler();
             string msg = sender.CreateMessage(patientReport);
 
             //todo
