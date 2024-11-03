@@ -1,5 +1,6 @@
-﻿using MedCom.EasySocket.SocketClient;
+﻿using MedCom.EasySocket.Core;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,19 +8,25 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.EasySocket.MySocketClient
+namespace MedCom.EasySocket.SocketCom
 {
-    public class MySocketClient<TPackageInfo> : ISocketClient, IDisposable
+    public class MySocketClient : ISocketClient, IDisposable
     {
 
         private readonly IPAddress _ipAddr;
         private readonly int _port;
         private Socket _mySocket;
-        public MySocketClient(IPAddress ipAddr, int port)
+        private IPkgFilter _filter;
+        public bool IsConnected;
+        public static ConcurrentQueue<byte> messageQueue = new ConcurrentQueue<byte>();
+        private Thread _thread;
+
+        public MySocketClient(IPAddress ipAddr, int port, IPkgFilter filter)
         {
             _ipAddr = ipAddr;
             _port = port;
             _mySocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _filter = filter;
         }
 
         public async Task Connect()
@@ -72,13 +79,19 @@ namespace MedCom.EasySocket.MySocketClient
             try
             {
                 var buffer = new byte[bufferSize];
+                while (IsConnected)
+                {
+                    int receivedBytes = await _mySocket.ReceiveAsync(new ArraySegment<byte>(buffer), SocketFlags.None);
 
-                int receivedBytes = await _mySocket.ReceiveAsync(new ArraySegment<byte>(buffer), SocketFlags.None);
+                    //string message = Encoding.UTF8.GetString(buffer, 0, receivedBytes);
+                }
 
-                string message = Encoding.UTF8.GetString(buffer, 0, receivedBytes);
 
-                IPkgFilter filter = null;
-                Console.WriteLine($"Received: {message}");
+
+                //string payload = _filter.ExtractPayload(message);
+
+                //OnRecv?.Invoke(payload);
+
             }
             catch (SocketException ex)
             {

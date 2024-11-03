@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.EasySocket.MySocketClient.Filters
+namespace MedCom.EasySocket.SocketCom.Filters
 {
     public class HL7PackageFilter : PkgFilter
     {

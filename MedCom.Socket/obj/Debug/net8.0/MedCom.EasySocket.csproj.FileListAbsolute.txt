@@ -11,16 +11,3 @@ C:\WorkSpace\GithubCode\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.Easy
 C:\WorkSpace\GithubCode\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\refint\MedCom.EasySocket.dll
 C:\WorkSpace\GithubCode\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.pdb
 C:\WorkSpace\GithubCode\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\ref\MedCom.EasySocket.dll
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.csproj.AssemblyReference.cache
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.GeneratedMSBuildEditorConfig.editorconfig
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.AssemblyInfoInputs.cache
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.AssemblyInfo.cs
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.csproj.CoreCompileInputs.cache
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.sourcelink.json
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\bin\Debug\net8.0\MedCom.EasySocket.deps.json
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\bin\Debug\net8.0\MedCom.EasySocket.dll
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\bin\Debug\net8.0\MedCom.EasySocket.pdb
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.dll
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\refint\MedCom.EasySocket.dll
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\MedCom.EasySocket.pdb
-C:\WorkSpace\mygithub\MedCom.Socket\MedCom.Socket\obj\Debug\net8.0\ref\MedCom.EasySocket.dll

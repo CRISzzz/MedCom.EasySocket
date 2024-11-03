@@ -1,5 +1,7 @@
 ﻿using MedCom.EasySocket.Core;
 using MedCom.EasySocket.HL7.HandlersV23;
+using MedCom.EasySocket.SocketCom;
+using MedCom.EasySocket.SocketCom.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,14 @@ namespace MedCom.EasySocket.HL7
 {
     public class Protohl7 : IProtohl7
     {
+        private ISocketClient _socketClient;
+
+        public Protohl7(ISocketClient client)
+        {
+            _socketClient = client;
+            _socketClient.Connect();
+        }
+
         public void FetchPatientData()
         {
 
@@ -18,10 +28,16 @@ namespace MedCom.EasySocket.HL7
         public bool SendReport(Func<PatientReport> report)
         {
             PatientReport patientReport = report();
-            MsgSender sender = new ORU_R01_HL7PkgHandler();
-            string msg = sender.CreateMessage(patientReport);
 
-            //todo
+            //if (_socketClient.OnRecv == null)
+            //{
+            //    _socketClient.OnRecv += new ACK_R01_HL7Handler().Parse;
+            //}
+            IMsgSender pkgSender = new ORU_R01_HL7PkgHandler();
+
+            string msg = pkgSender.CreateMessage(patientReport);
+            _socketClient.Send(msg);
+
             return true;
         }
 

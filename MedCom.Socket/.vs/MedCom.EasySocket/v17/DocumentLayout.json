@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\hl7\\handlersv23\\oru_r01_hl7pkghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:hl7\\handlersv23\\oru_r01_hl7pkghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\socketcom\\filters\\hl7packagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:socketcom\\filters\\hl7packagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\socketcom\\mysocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:socketcom\\mysocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\socketcom\\isocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:socketcom\\isocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\hl7\\handlersv23\\ack_r01_hl7handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:hl7\\handlersv23\\ack_r01_hl7handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\core\\msganswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:core\\msganswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\core\\imsganswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:core\\imsganswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\core\\msgsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:core\\msgsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\core\\imsgsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:core\\imsgsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\hl7\\handlersv23\\oru_r01_hl7pkghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:hl7\\handlersv23\\oru_r01_hl7pkghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\socketcom\\pkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:socketcom\\pkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\hl7\\protohl7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:hl7\\protohl7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\mysocketclient\\mysocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:mysocketclient\\mysocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\core\\iprotocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:core\\iprotocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\mysocketclient\\filters\\hl7packagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:mysocketclient\\filters\\hl7packagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\mysocketclient\\ipkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:mysocketclient\\ipkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\mysocketclient\\pkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:mysocketclient\\pkgfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\mysocketclient\\isocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:mysocketclient\\isocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|c:\\workspace\\mygithub\\medcom.socket\\medcom.socket\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFB7012-F2F0-4F8A-B20A-023DEA618F09}|MedCom.EasySocket.csproj|solutionrelative:servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,146 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ACK_R01_HL7Handler.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
-              "RelativeDocumentMoniker": "HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
-              "RelativeToolTip": "HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAA0AAAA",
+              "DocumentIndex": 7,
+              "Title": "PkgFilter.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\PkgFilter.cs",
+              "RelativeDocumentMoniker": "SocketCom\\PkgFilter.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\PkgFilter.cs",
+              "RelativeToolTip": "SocketCom\\PkgFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T02:58:54.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MsgSender.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\MsgSender.cs",
-              "RelativeDocumentMoniker": "Core\\MsgSender.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\MsgSender.cs",
-              "RelativeToolTip": "Core\\MsgSender.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:35:07.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MsgAnswer.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\MsgAnswer.cs",
-              "RelativeDocumentMoniker": "Core\\MsgAnswer.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\MsgAnswer.cs",
-              "RelativeToolTip": "Core\\MsgAnswer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T02:03:43.779Z",
+              "WhenOpened": "2024-11-03T11:49:59.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ORU_R01_HL7PkgHandler.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
-              "RelativeDocumentMoniker": "HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
-              "RelativeToolTip": "HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABNAAAA",
+              "Title": "HL7PackageFilter.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\Filters\\HL7PackageFilter.cs",
+              "RelativeDocumentMoniker": "SocketCom\\Filters\\HL7PackageFilter.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\Filters\\HL7PackageFilter.cs",
+              "RelativeToolTip": "SocketCom\\Filters\\HL7PackageFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:35:03.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Protohl7.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\Protohl7.cs",
-              "RelativeDocumentMoniker": "HL7\\Protohl7.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\Protohl7.cs",
-              "RelativeToolTip": "HL7\\Protohl7.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:29:13.686Z",
+              "WhenOpened": "2024-11-03T11:43:51.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IProtocal.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IProtocal.cs",
-              "RelativeDocumentMoniker": "Core\\IProtocal.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IProtocal.cs",
-              "RelativeToolTip": "Core\\IProtocal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ORU_R01_HL7PkgHandler.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
+              "RelativeDocumentMoniker": "HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
+              "RelativeToolTip": "HL7\\HandlersV23\\ORU_R01_HL7PkgHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:29:08.664Z",
+              "WhenOpened": "2024-11-03T09:16:26.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HL7PackageFilter.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\Filters\\HL7PackageFilter.cs",
-              "RelativeDocumentMoniker": "MySocketClient\\Filters\\HL7PackageFilter.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\Filters\\HL7PackageFilter.cs",
-              "RelativeToolTip": "MySocketClient\\Filters\\HL7PackageFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAfAAAA",
+              "DocumentIndex": 5,
+              "Title": "IMsgSender.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IMsgSender.cs",
+              "RelativeDocumentMoniker": "Core\\IMsgSender.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IMsgSender.cs",
+              "RelativeToolTip": "Core\\IMsgSender.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:04:43.772Z",
+              "WhenOpened": "2024-11-03T09:14:15.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMsgAnswer.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IMsgAnswer.cs",
+              "RelativeDocumentMoniker": "Core\\IMsgAnswer.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\Core\\IMsgAnswer.cs",
+              "RelativeToolTip": "Core\\IMsgAnswer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:48:31.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ACK_R01_HL7Handler.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
+              "RelativeDocumentMoniker": "HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
+              "RelativeToolTip": "HL7\\HandlersV23\\ACK_R01_HL7Handler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:28:05.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISocketClient.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\ISocketClient.cs",
+              "RelativeDocumentMoniker": "SocketCom\\ISocketClient.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\ISocketClient.cs",
+              "RelativeToolTip": "SocketCom\\ISocketClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:04:44.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MySocketClient.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\MySocketClient.cs",
+              "RelativeDocumentMoniker": "SocketCom\\MySocketClient.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\SocketCom\\MySocketClient.cs",
+              "RelativeToolTip": "SocketCom\\MySocketClient.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:04:51.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IPkgFilter.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\IPkgFilter.cs",
-              "RelativeDocumentMoniker": "MySocketClient\\IPkgFilter.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\IPkgFilter.cs",
-              "RelativeToolTip": "MySocketClient\\IPkgFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAAAAAA",
+              "Title": "Protohl7.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\Protohl7.cs",
+              "RelativeDocumentMoniker": "HL7\\Protohl7.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\HL7\\Protohl7.cs",
+              "RelativeToolTip": "HL7\\Protohl7.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:16:08.367Z"
+              "WhenOpened": "2024-11-03T07:59:37.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "PkgFilter.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\PkgFilter.cs",
-              "RelativeDocumentMoniker": "MySocketClient\\PkgFilter.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\PkgFilter.cs",
-              "RelativeToolTip": "MySocketClient\\PkgFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAqAAAA",
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "ServiceCollectionExtensions.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwBUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:09:21.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ISocketClient.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\ISocketClient.cs",
-              "RelativeDocumentMoniker": "MySocketClient\\ISocketClient.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\ISocketClient.cs",
-              "RelativeToolTip": "MySocketClient\\ISocketClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T07:12:43.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MySocketClient.cs",
-              "DocumentMoniker": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\MySocketClient.cs",
-              "RelativeDocumentMoniker": "MySocketClient\\MySocketClient.cs",
-              "ToolTip": "C:\\WorkSpace\\mygithub\\MedCom.Socket\\MedCom.Socket\\MySocketClient\\MySocketClient.cs",
-              "RelativeToolTip": "MySocketClient\\MySocketClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T05:38:53.84Z",
+              "WhenOpened": "2024-11-03T07:59:34.69Z",
               "EditorCaption": ""
             }
           ]

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedCom.EasySocket.MySocketClient
+namespace MedCom.EasySocket.SocketCom
 {
-    public abstract class PkgFilter : IPkgFilter
+    public abstract class PkgFilter: IPkgFilter
     {
         private byte[] byteStart;
         private byte[] byteEnd;
