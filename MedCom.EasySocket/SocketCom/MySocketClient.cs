@@ -26,8 +26,14 @@ namespace MedCom.EasySocket.SocketCom
             _ipAddr = ipAddr;
             _port = port;
             _filter = filter;
+            cts = new CancellationTokenSource();
         }
 
+        public void Start()
+        {
+            Task.Run(() => OpenAndKeepConnected());
+            Task.Run(() => ReceiveMessage());
+        }
 
         #region basic socket method
         public void Init()
@@ -69,7 +75,11 @@ namespace MedCom.EasySocket.SocketCom
         public void Close()
         {
             cts.Cancel();
-            _mySocket.Close();
+            if (_mySocket != null)
+            {
+                _mySocket.Close();
+                _mySocket = null;
+            }
         }
 
         public bool IsConnected()
@@ -96,10 +106,16 @@ namespace MedCom.EasySocket.SocketCom
                 var buffer = new byte[1024];
                 while (!cts.IsCancellationRequested)
                 {
-                    int receivedBytes = await _mySocket.ReceiveAsync(new ArraySegment<byte>(buffer), SocketFlags.None);
-                    byte[] receivedData = new byte[receivedBytes];
-                    Array.Copy(buffer, receivedData, receivedBytes);
-                    _messageQueue.Enqueue(receivedData);
+                    if (_mySocket.Connected)
+                    {
+                        int receivedBytes = await _mySocket.ReceiveAsync(new ArraySegment<byte>(buffer), SocketFlags.None);
+                        if (receivedBytes > 0)
+                        {
+                            byte[] receivedData = new byte[receivedBytes];
+                            Array.Copy(buffer, receivedData, receivedBytes);
+                            _messageQueue.Enqueue(receivedData);
+                        }
+                    }
                     //string message = Encoding.UTF8.GetString(buffer, 0, receivedBytes);
                 }
                 //string payload = _filter.ExtractPayload(message);
@@ -116,9 +132,7 @@ namespace MedCom.EasySocket.SocketCom
             }
         }
 
-
-
-        public async Task OpenAndKeepConnected(CancellationToken cts)
+        public async Task OpenAndKeepConnected()
         {
             while (!cts.IsCancellationRequested)
             {
