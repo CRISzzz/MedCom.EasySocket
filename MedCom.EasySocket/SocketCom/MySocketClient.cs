@@ -1,4 +1,5 @@
 ﻿using MedCom.EasySocket.Core;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -19,12 +20,13 @@ namespace MedCom.EasySocket.SocketCom
         private IPkgFilter _filter;
         private CancellationTokenSource cts;
 
-        public static ConcurrentQueue<byte[]> _messageQueue = new ConcurrentQueue<byte[]>();
+        public ConcurrentQueue<byte[]> _messageQueue;
 
-        public MySocketClient(IPAddress ipAddr, int port)
+        public MySocketClient(IOptions<MedComOption> options, ConcurrentQueue<byte[]> messageQueue)
         {
-            _ipAddr = ipAddr;
-            _port = port;
+            _ipAddr = options.Value.ServerIPAddr;
+            _port = options.Value.ServerPort;
+            _messageQueue = messageQueue;
             cts = new CancellationTokenSource();
         }
 

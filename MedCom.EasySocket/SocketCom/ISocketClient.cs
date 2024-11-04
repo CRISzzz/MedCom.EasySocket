@@ -9,10 +9,8 @@ namespace MedCom.EasySocket.SocketCom
 {
     public interface ISocketClient
     {
-        //event Func<string, Result<T>>? OnRecv;
-        Task Connect();
+        void Start();
         Task<bool> Send(string message);
-        Task ReceiveMessage();
         void Close();
 
     }

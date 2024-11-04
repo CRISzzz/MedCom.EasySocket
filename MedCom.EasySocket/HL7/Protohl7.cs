@@ -17,7 +17,7 @@ namespace MedCom.EasySocket.HL7
         public Protohl7(ISocketClient client)
         {
             _socketClient = client;
-            _socketClient.Connect();
+            _socketClient.Start();
         }
 
         public void FetchPatientData()
@@ -28,11 +28,6 @@ namespace MedCom.EasySocket.HL7
         public bool SendReport(Func<PatientReport> report)
         {
             PatientReport patientReport = report();
-
-            //if (_socketClient.OnRecv == null)
-            //{
-            //    _socketClient.OnRecv += new ACK_R01_HL7Handler().Parse;
-            //}
             IMsgSender pkgSender = new ORU_R01_HL7PkgHandler();
 
             string msg = pkgSender.CreateMessage(patientReport);
