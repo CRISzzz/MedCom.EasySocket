@@ -10,88 +10,100 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.SocketCom
 {
-    public class MySocketClient : ISocketClient, IDisposable
+    public class MySocketClient : ISocketClient
     {
 
         private readonly IPAddress _ipAddr;
         private readonly int _port;
-        private Socket _mySocket;
+        private Socket? _mySocket;
         private IPkgFilter _filter;
-        public bool IsConnected;
-        public static ConcurrentQueue<byte> messageQueue = new ConcurrentQueue<byte>();
-        private Thread _thread;
+        private CancellationTokenSource cts;
+
+        public static ConcurrentQueue<byte[]> _messageQueue = new ConcurrentQueue<byte[]>();
 
         public MySocketClient(IPAddress ipAddr, int port, IPkgFilter filter)
         {
             _ipAddr = ipAddr;
             _port = port;
-            _mySocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             _filter = filter;
+        }
+
+
+        #region basic socket method
+        public void Init()
+        {
+            _mySocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _mySocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
         }
 
         public async Task Connect()
         {
-            if (_mySocket != null)
-                _mySocket.Close();
+            try
+            {
+                await _mySocket.ConnectAsync(_ipAddr, _port);
+            }
+            catch (Exception)
+            {
 
-            await _mySocket.ConnectAsync(_ipAddr, _port);
-            Console.WriteLine($"MedCom connected the remote server{_ipAddr.ToString()}:{_port}");
+                _mySocket = null;
+            }
+
         }
-
 
         public async Task<bool> Send(string message)
         {
             try
             {
-                if (_mySocket == null || !_mySocket.Connected)
-                    await Connect();
-
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 int sendBytes = await _mySocket.SendAsync(data);
-
-                Console.WriteLine($"Sent: {message}");
                 if (sendBytes > 0)
                     return await Task.FromResult(true);
                 else return false;
-
             }
-            catch (SocketException ex)
+            catch (Exception)
             {
-                Console.WriteLine($"Socket error while connecting: {ex.Message}");
                 return await Task.FromResult(false);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Unexpected error while connecting: {ex.Message}");
-                return await Task.FromResult(false);
-            }
-
         }
 
-        public async Task ReceiveMessage()
+        public void Close()
         {
-            await ReceiveMessage(1024);
+            cts.Cancel();
+            _mySocket.Close();
         }
 
-
-        private async Task ReceiveMessage(int bufferSize = 1024)
+        public bool IsConnected()
         {
             try
             {
-                var buffer = new byte[bufferSize];
-                while (IsConnected)
+                return !(_mySocket.Poll(1, SelectMode.SelectRead) && _mySocket.Available == 0);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+        }
+        #endregion
+
+
+        #region async Task
+        public async Task ReceiveMessage()
+        {
+            try
+            {
+                var buffer = new byte[1024];
+                while (!cts.IsCancellationRequested)
                 {
                     int receivedBytes = await _mySocket.ReceiveAsync(new ArraySegment<byte>(buffer), SocketFlags.None);
-
+                    byte[] receivedData = new byte[receivedBytes];
+                    Array.Copy(buffer, receivedData, receivedBytes);
+                    _messageQueue.Enqueue(receivedData);
                     //string message = Encoding.UTF8.GetString(buffer, 0, receivedBytes);
                 }
-
-
-
                 //string payload = _filter.ExtractPayload(message);
-
                 //OnRecv?.Invoke(payload);
-
             }
             catch (SocketException ex)
             {
@@ -104,15 +116,24 @@ namespace MedCom.EasySocket.SocketCom
             }
         }
 
-        public void Dispose()
-        {
-            Close();
-        }
 
-        public void Close()
+
+        public async Task OpenAndKeepConnected(CancellationToken cts)
         {
-            if (_mySocket != null)
-                _mySocket.Close();
+            while (!cts.IsCancellationRequested)
+            {
+                if (_mySocket == null)
+                {
+                    Init();
+                    await Connect();
+                }
+
+                if (!IsConnected())
+                    await Connect();
+
+                await Task.Delay(1000);
+            }
         }
+        #endregion
     }
 }
