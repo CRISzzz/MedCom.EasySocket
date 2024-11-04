@@ -21,11 +21,10 @@ namespace MedCom.EasySocket.SocketCom
 
         public static ConcurrentQueue<byte[]> _messageQueue = new ConcurrentQueue<byte[]>();
 
-        public MySocketClient(IPAddress ipAddr, int port, IPkgFilter filter)
+        public MySocketClient(IPAddress ipAddr, int port)
         {
             _ipAddr = ipAddr;
             _port = port;
-            _filter = filter;
             cts = new CancellationTokenSource();
         }
 
@@ -116,10 +115,7 @@ namespace MedCom.EasySocket.SocketCom
                             _messageQueue.Enqueue(receivedData);
                         }
                     }
-                    //string message = Encoding.UTF8.GetString(buffer, 0, receivedBytes);
                 }
-                //string payload = _filter.ExtractPayload(message);
-                //OnRecv?.Invoke(payload);
             }
             catch (SocketException ex)
             {
