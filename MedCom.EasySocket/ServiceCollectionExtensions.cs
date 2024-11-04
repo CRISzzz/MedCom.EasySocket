@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace MedCom.EasySocket
         public static IServiceCollection AddHL7(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<MedComOption>(configuration.GetSection("MedComOption"));
+            services.AddSingleton<ConcurrentQueue<byte[]>>();
             services.AddScoped<ISocketClient, MySocketClient>();
             services.AddScoped<IPkgFilter, HL7PackageFilter>();
             services.AddSingleton<IProtohl7, Protohl7>();
