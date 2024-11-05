@@ -1,8 +1,9 @@
 ﻿using MedCom.EasySocket.Core;
 using MedCom.EasySocket.HL7.HandlersV23;
 using MedCom.EasySocket.SocketCom;
-using MedCom.EasySocket.SocketCom.Filters;
+using MedCom.EasySocket.SocketCom.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,12 @@ namespace MedCom.EasySocket.HL7
     public class Protohl7 : IProtohl7
     {
         private ISocketClient _socketClient;
+        private IObservableQueue<Package> _queue;
 
-        public Protohl7(ISocketClient client)
+        public Protohl7(ISocketClient client, IObservableQueue<Package> queue)
         {
             _socketClient = client;
+            _queue = queue;
             _socketClient.Start();
         }
 
@@ -25,16 +28,26 @@ namespace MedCom.EasySocket.HL7
 
         }
 
-        public bool SendReport(Func<PatientReport> report)
+        public bool SendReport(Func<PatientReport> getReport)
         {
-            PatientReport patientReport = report();
-            IMsgSender pkgSender = new ORU_R01_HL7PkgHandler();
+            PatientReport report = getReport();
+            IMsgSender messageSender = new ORU_R01_HL7PkgHandler();
+            string hl7Message = messageSender.CreateMessage(report);
 
-            string msg = pkgSender.CreateMessage(patientReport);
-            _socketClient.Send(msg);
+            _socketClient.Send(hl7Message);
 
-            return true;
+            Package responsePackage;
+            if (!_queue.TryDequeue(out responsePackage) || responsePackage == null)
+            {
+                return false;
+            }
+
+            var ackHandler = new ACK_R01_HL7Handler();
+            var parsedResponse = ackHandler.Parse(responsePackage.payloadString);
+
+            return parsedResponse.Success;
         }
+
 
         public bool SendReportQc(Func<PatientReport> report)
         {
