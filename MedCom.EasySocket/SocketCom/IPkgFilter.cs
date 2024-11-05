@@ -8,6 +8,7 @@ namespace MedCom.EasySocket.SocketCom
 {
     public interface IPkgFilter
     {
-        string ExtractPayload(string message);
+
+        void ResolveBytes(byte[] bytes);
     }
 }

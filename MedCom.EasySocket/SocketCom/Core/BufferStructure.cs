@@ -11,10 +11,10 @@ namespace MedCom.EasySocket.SocketCom.Core
     public class BufferStructure
     {
         private byte[] _bytes;
-        private byte _head;
-        private byte _tail;
+        private byte[] _head;
+        private byte[] _tail;
 
-        public BufferStructure(byte[] bytes, byte head, byte tail)
+        public BufferStructure(byte[] bytes, byte[] head, byte[] tail)
         {
             if (bytes == null)
                 throw new ArgumentNullException(nameof(bytes), "Byte array cannot be null.");
@@ -23,18 +23,15 @@ namespace MedCom.EasySocket.SocketCom.Core
             _bytes = bytes;
         }
 
-        private Dictionary<int, byte> _headTailCache;
+        private Dictionary<int, ByteType> _headTailCache;
 
-        private Dictionary<int, byte> headTailDic
+        private Dictionary<int, ByteType> headTailDic
         {
             get
             {
                 if (_headTailCache == null)
                 {
-                    _headTailCache = _bytes
-                            .Select((value, index) => new { Index = index, Value = value })
-                            .Where(x => x.Value == _head || x.Value == _tail)
-                            .ToDictionary(x => x.Index, x => x.Value);
+                    _headTailCache = SubArrayMatcher.FindSubArrays(_bytes, _head, _tail);
                 }
                 return _headTailCache;
             }
@@ -46,20 +43,18 @@ namespace MedCom.EasySocket.SocketCom.Core
             {
                 var firstTailPair = headTailDic.FirstOrDefault();
 
-                if (!EqualityComparer<KeyValuePair<int, byte>>.Default.Equals(firstTailPair, default))
+                if (!EqualityComparer<KeyValuePair<int, ByteType>>.Default.Equals(firstTailPair, default))
                 {
                     byte[] foreBytes = new byte[firstTailPair.Key + 1];
                     Array.Copy(_bytes, foreBytes, firstTailPair.Key + 1);
                     return new ForeBuffer
                     {
-                        IsConcluedTail = true,
                         Bytes = foreBytes
                     };
                 }
 
                 return new ForeBuffer
                 {
-                    IsConcluedTail = false,
                     Bytes = Array.Empty<byte>()
                 };
             }
@@ -76,13 +71,13 @@ namespace MedCom.EasySocket.SocketCom.Core
                     return packages;
                 }
 
-                var temphtDic = new Dictionary<int, byte>(headTailDic);
+                var temphtDic = new Dictionary<int, ByteType>(headTailDic);
 
-                if (temphtDic.First().Value == _tail)
+                if (temphtDic.First().Value == ByteType.EndPst)
                 {
                     temphtDic.Remove(temphtDic.First().Key);
                 }
-                if (temphtDic.Last().Value == _head)
+                if (temphtDic.Last().Value == ByteType.StartPst)
                 {
                     temphtDic.Remove(temphtDic.Last().Key);
                 }
@@ -97,7 +92,7 @@ namespace MedCom.EasySocket.SocketCom.Core
 
                 for (int i = 0; i < kvLst.Count - 1; i++)
                 {
-                    if (kvLst[i].Value == _head && kvLst[i + 1].Value == _tail)
+                    if (kvLst[i].Value == ByteType.StartPst && kvLst[i + 1].Value == ByteType.EndPst)
                     {
                         pkgIdxLst.Add((kvLst[i].Key, kvLst[i + 1].Key));
                     }
@@ -124,23 +119,21 @@ namespace MedCom.EasySocket.SocketCom.Core
         {
             get
             {
-                var lastHeadPair = headTailDic.LastOrDefault(x => x.Value == _head);
+                var lastHeadPair = headTailDic.LastOrDefault(x => x.Value == ByteType.StartPst);
 
-                if (!EqualityComparer<KeyValuePair<int, byte>>.Default.Equals(lastHeadPair, default))
+                if (!EqualityComparer<KeyValuePair<int, ByteType>>.Default.Equals(lastHeadPair, default))
                 {
                     byte[] foreBytes = new byte[_bytes.Length - lastHeadPair.Key];
                     Array.Copy(_bytes, lastHeadPair.Key, foreBytes, 0, foreBytes.Length);
 
                     return new BackBuffer
                     {
-                        IsConcluedHead = true,
                         Bytes = foreBytes
                     };
                 }
 
                 return new BackBuffer
                 {
-                    IsConcluedHead = false,
                     Bytes = Array.Empty<byte>()
                 };
             }

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace MedCom.EasySocket.SocketCom.Core
 {
-    public class Package
+    public enum ByteType
     {
-
-        public byte[] Fore { get; set; }
-
-        public byte[] Payload { get; set; }
-        public byte[] Tail { get; set; }
+        StartPst,
+        EndPst
     }
 }

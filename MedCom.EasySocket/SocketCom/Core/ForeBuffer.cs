@@ -8,8 +8,6 @@ namespace MedCom.EasySocket.SocketCom.Core
 {
     public class ForeBuffer
     {
-        public bool IsConcluedTail { get; set; }
-
         public byte[] Bytes { get; set; }
     }
 }
