@@ -13,7 +13,7 @@ namespace MedCom.EasySocket.SocketCom
         private byte[] byteStart;
         private byte[] byteEnd;
 
-        public ConcurrentQueue<Package> packagesMQ = new ConcurrentQueue<Package>();
+        private IObservableQueue<Package> _packagesMQ;
         private byte[] lastBackBuffer;
 
         public PkgFilter(string start, string end)
@@ -21,7 +21,12 @@ namespace MedCom.EasySocket.SocketCom
             byteStart = GetBytesFromString(start);
             byteEnd = GetBytesFromString(end);
         }
-        public abstract string ExtractPayload(string message);
+
+        public PkgFilter(string start, string end, IObservableQueue<Package> packagesMQ)
+    : this(start, end)
+        {
+            _packagesMQ = packagesMQ;
+        }
 
         public byte[] GetBytesFromString(string hex)
         {
@@ -43,7 +48,7 @@ namespace MedCom.EasySocket.SocketCom
 
             if (lastBackBuffer?.Any() == true)
             {
-                packagesMQ.Enqueue(new Package
+                _packagesMQ.Enqueue(new Package
                 {
                     Payload = lastBackBuffer.Concat(buff.ForeBuffer.Bytes).ToArray()
                 });
@@ -53,7 +58,7 @@ namespace MedCom.EasySocket.SocketCom
             {
                 foreach (var pkg in buff.Packages)
                 {
-                    packagesMQ.Enqueue(pkg);
+                    _packagesMQ.Enqueue(pkg);
                 }
             }
 

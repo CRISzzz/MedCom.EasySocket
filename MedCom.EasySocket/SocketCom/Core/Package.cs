@@ -13,5 +13,7 @@ namespace MedCom.EasySocket.SocketCom.Core
 
         public byte[] Payload { get; set; }
         public byte[] Tail { get; set; }
+
+        public string payloadString => Encoding.UTF8.GetString(Payload);
     }
 }
